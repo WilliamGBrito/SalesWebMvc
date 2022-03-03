@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace SalesWebMvc.Models
 {
-    public class Sellers
+    public class Seller
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -15,11 +15,11 @@ namespace SalesWebMvc.Models
         public int DepartmentId { get; set; }
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
 
-        public Sellers()
+        public Seller()
         {
         }
 
-        public Sellers(string name, string email, DateTime birthDate, double baseSalary, Department department)
+        public Seller(string name, string email, DateTime birthDate, double baseSalary, Department department)
         {
             Name = name;
             Email = email;

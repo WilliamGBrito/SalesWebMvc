@@ -1,9 +1,7 @@
 ﻿using SalesWebMvc.Data;
-using System;
+using SalesWebMvc.Models;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using SalesWebMvc.Models;
 
 namespace SalesWebMvc.Services
 {
@@ -16,14 +14,13 @@ namespace SalesWebMvc.Services
             _context = context;
         }
 
-        public List<Sellers> FindAll()
+        public List<Seller> FindAll()
         {
             return _context.Seller.ToList();
         }
 
-        public void Insert(Sellers obj)
+        public void Insert(Seller obj)
         {
-            obj.Department = _context.Department.First();
             _context.Add(obj);
             _context.SaveChanges();
         }
