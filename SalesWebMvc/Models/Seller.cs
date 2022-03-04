@@ -20,7 +20,7 @@ namespace SalesWebMvc.Models
         public string Email { get; set; }
 
         [Required(ErrorMessage = "{0} required")]
-        [Display(Name = "Bitrh Date")]
+        [Display(Name = "Birth Date")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyy}")]
         public DateTime BirthDate { get; set; }
