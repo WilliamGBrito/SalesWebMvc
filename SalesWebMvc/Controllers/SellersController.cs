@@ -136,8 +136,8 @@ namespace SalesWebMvc.Controllers
                 await _sellerService.UpdateAsync(seller);
                 return RedirectToAction(nameof(Index));
             }
-            catch(ApplicationException e)
-            { 
+            catch (ApplicationException e)
+            {
                 return RedirectToAction(nameof(Error), new { message = e.Message });
             }
         }
